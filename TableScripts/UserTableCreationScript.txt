@@ -19,14 +19,14 @@ CREATE TABLE `buyer` (
   `REWARDPOINTS` int(11) DEFAULT NULL,
   `ISACTIVE` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`BUYERID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 
 --
 -- Dumping data for table `buyer`
 --
-insert into buyer values('saurabh kumar','saurabh@gmail.com','7777766666','Kumar@w*3996');
-insert into buyer values('Akash kumar','akash@gmail.com','7777766555','Akash@w*3996');
+insert into buyer(NAME,EMAIL,PHONENUMBER,PASSWORD) values('saurabh kumar','saurabh@gmail.com','7777766666','Kumar@w*3996');
+insert into buyer('NAME','EMAIL','PHONENUMBER','PASSWORD') values('Akash kumar','akash@gmail.com','7777766555','Akash@w*3996');
 
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `cart` (
   `PRODID` int(11) NOT NULL,
   `QUANTITY` int(11) NOT NULL,
   PRIMARY KEY (`BUYERID`,`PRODID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+); ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 --
@@ -65,7 +65,8 @@ CREATE TABLE `seller` (
   `PASSWORD` varchar(45) NOT NULL,
   `ISACTIVE` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`SELLERID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
+ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
